@@ -99,9 +99,16 @@ watch(route, () => {
     content: attr(data-text);
     color: var(--gray-500);
     font-weight: 300;
-    font-size: 0.9rem;
     transition: ease all 240ms;
     white-space: nowrap;
+  }
+
+  a:hover {
+    background-color: var(--gray-50);
+
+    &::before {
+      color: var(--gray-600);
+    }
   }
 
   a,
@@ -110,25 +117,24 @@ watch(route, () => {
     display: grid;
     padding: 0 1rem;
     place-content: center;
-    height: 2.4rem;
+    height: 3rem;
     color: var(--gray-500);
     text-decoration: none;
     transition: ease all 320ms;
     white-space: nowrap;
-    font-weight: 550;
+    font-weight: 600;
     color: transparent;
-    font-size: 1rem;
+    font-size: 0.9375rem;
+    border-radius: 0.25rem;
   }
   &.menu__item--active a::before {
-    font-weight: 550;
+    font-weight: 600;
     color: var(--gray-700);
-    font-size: 1rem;
   }
 }
 
 .menu__item-indicator {
   position: absolute;
-  z-index: -1;
   inset: 0;
   pointer-events: none;
   opacity: 0;
@@ -137,7 +143,7 @@ watch(route, () => {
 }
 .menu__item-indicator-inner {
   position: absolute;
-  inset: 0 1rem;
+  inset: 0 1rem 0.4rem 1rem;
   border-bottom: 3px solid var(--blue-350);
   transform-origin: 0% 0%;
   transition: transform ease 320ms;
