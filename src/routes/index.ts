@@ -18,5 +18,3 @@ export const routes: RouteRecordRaw[] = [{
   name: 'Projects',
   component: Projects
 }];
-
-export const afterMountedPath = ref('');
