@@ -44,7 +44,7 @@ const animateMenuIndicator = (): void => {const currentMenuItemIndex = menuItems
 };
 
 const menuItems: MenuItem[] = [{
-  name: 'Home',
+  name: 'About',
   path: '/'
 },{
   name: 'Resume',
@@ -78,7 +78,6 @@ watch(route, () => {
   display: flex;
   padding: 0;
   list-style: none;
-  gap: 1rem;
   isolation: isolate;
 }
 
@@ -115,7 +114,7 @@ watch(route, () => {
   &.menu__item--active a {
     position: relative;
     display: grid;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     place-content: center;
     height: 3rem;
     color: var(--gray-500);
@@ -143,8 +142,8 @@ watch(route, () => {
 }
 .menu__item-indicator-inner {
   position: absolute;
-  inset: 0 1rem 0.4rem 1rem;
-  border-bottom: 3px solid var(--blue-350);
+  inset: 0 1.5rem 0.3rem 1.5rem;
+  border-bottom: 0.25rem solid var(--blue-300);
   transform-origin: 0% 0%;
   transition: transform ease 320ms;
 }
