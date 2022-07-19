@@ -17,10 +17,17 @@ import Menu from '@/components/Menu.vue';
 
 <style scoped>
 .app__main {
-  max-width: 74rem;
-  padding: 0rem;
+  max-width: 50rem;
+  padding: 1rem 0rem;
   margin: auto;
 }
+
+@media only screen and (min-width: 80rem) {
+  .app__main {
+    max-width: 74rem;
+  }
+}
+
 .app__content {
   padding: 1.5rem;
 }

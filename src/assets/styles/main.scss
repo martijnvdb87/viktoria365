@@ -6,14 +6,30 @@ body {
   line-height: 1.65;
 }
 
-.columns {
-  display: flex;
-  gap: 6rem;
+@media only screen and (min-width: 52rem) {
+  aside.columns__column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2rem;
+
+    > section {
+      flex: 0 0 calc(50% - 1rem);
+    }
+  }
 }
 
-.columns__column {
-  flex: 1 0 0;
-}
-aside.columns__column {
-  flex: 0 0 18rem;
+@media only screen and (min-width: 80rem) {
+  .columns {
+    display: flex;
+    gap: 6rem;
+  }
+
+  .columns__column {
+    flex: 1 0 0;
+  }
+
+  aside.columns__column {
+    display: block;
+    flex: 0 0 18rem;
+  }
 }
