@@ -5,3 +5,15 @@ body {
   font-weight: 350;
   line-height: 1.65;
 }
+
+.columns {
+  display: flex;
+  gap: 6rem;
+}
+
+.columns__column {
+  flex: 1 0 0;
+}
+aside.columns__column {
+  flex: 0 0 18rem;
+}
