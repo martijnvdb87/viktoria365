@@ -3,6 +3,7 @@ import { computed, } from 'vue';
 
 import iconBriefcase from '@/assets/icons/briefcase.svg?raw';
 import iconCode from '@/assets/icons/code.svg?raw';
+import iconExternalLink from '@/assets/icons/external-link.svg?raw';
 import iconSmile from '@/assets/icons/smile.svg?raw';
 import iconUser from '@/assets/icons/user.svg?raw';
 
@@ -14,6 +15,7 @@ const icon = computed(() => {
   switch(props.type) {
     case 'briefcase': return iconBriefcase;
     case 'code': return iconCode;
+    case 'external-link': return iconExternalLink;
     case 'smile': return iconSmile;
     case 'user': return iconUser;
   }
