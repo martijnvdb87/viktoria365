@@ -53,7 +53,7 @@ import Link from '@/components/Link.vue';
 <style scoped lang="scss">
 .label-cloud {
   display: flex;
-  gap: 0.375rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 </style>

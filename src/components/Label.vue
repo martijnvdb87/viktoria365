@@ -11,8 +11,8 @@
   padding: 0.25rem 0.75rem;
   font-size: 0.8125rem;
   font-weight: 500;
-  color: var(--gray-600);
-  background-color: var(--gray-50);
-  border-radius: 999rem;
+  color: var(--blue-700);
+  background-color: var(--blue-50);
+  border-radius: 0.25rem;
 }
 </style>

@@ -37,15 +37,26 @@ const isInternalLink = computed(() => {
 <style scoped lang="scss">
 .link {
   display: inline-flex;
-  color: var(--blue-350);
+  padding: 0 0.0625rem;
+  color: var(--gray-700);
   font-weight: 450;
   text-decoration: none;
   align-items: center;
-  gap: 0.125rem;
+  gap: 0.25rem;
   border-radius: 0.125rem;
-  transition: ease all 160ms;
+  transition: transform ease 160ms, color ease 160ms;
 
   &:hover {
+    color: var(--blue-500);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+  &:focus-visible {
+    z-index: 1;
+    outline: 0.1875rem solid var(--blue-350);
+    color: var(--blue-500);
   }
 }
 
@@ -56,7 +67,7 @@ const isInternalLink = computed(() => {
   &::before {
     position: absolute;
     z-index: -1;
-    inset: 0 0 0.0625rem 0;
+    inset: 0 0 0.125rem 0;
     content: '';
     border-bottom: 0.125rem solid var(--blue-300);
     pointer-events: none;
@@ -68,5 +79,7 @@ const isInternalLink = computed(() => {
   position: relative;
   width: 1rem;
   height: 1rem;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 </style>

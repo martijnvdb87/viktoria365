@@ -24,11 +24,10 @@ section {
 
 header {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.625rem;
   align-items: center;
-  font-size: 0.9375rem;
   margin-bottom: 0.5rem;
-  color: var(--gray-700);
+  color: var(--gray-900);
 
   svg {
     width: 1.25rem;

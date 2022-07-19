@@ -44,13 +44,13 @@
     justify-content: center;
 
     h1 {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 1.375rem;
-      color: var(--gray-700);
+      color: var(--gray-900);
     }
 
     p {
-      font-weight: 300;
+      font-weight: 350;
       font-size: 1.0625rem;
     }
   }

@@ -96,9 +96,9 @@ watch(route, () => {
     display: grid;
     place-content: center;
     content: attr(data-text);
-    color: var(--gray-500);
-    font-weight: 300;
-    transition: ease all 240ms;
+    color: var(--gray-550);
+    font-weight: 350;
+    transition: all ease 240ms;
     white-space: nowrap;
   }
 
@@ -108,6 +108,19 @@ watch(route, () => {
     &::before {
       color: var(--gray-600);
     }
+  }
+  a:focus-visible {
+    z-index: 1;
+    outline: 0.1875rem solid var(--blue-350);
+    background-color: var(--gray-50);
+
+    &::before {
+      color: var(--gray-600);
+    }
+  }
+
+  a:active {
+    transform: scale(0.95);
   }
 
   a,
@@ -119,7 +132,7 @@ watch(route, () => {
     height: 3rem;
     color: var(--gray-500);
     text-decoration: none;
-    transition: ease all 320ms;
+    transition: transform ease 320ms, background-color ease 320ms;
     white-space: nowrap;
     font-weight: 600;
     color: transparent;
@@ -128,12 +141,13 @@ watch(route, () => {
   }
   &.menu__item--active a::before {
     font-weight: 600;
-    color: var(--gray-700);
+    color: var(--gray-900);
   }
 }
 
 .menu__item-indicator {
   position: absolute;
+  z-index: 1;
   inset: 0;
   pointer-events: none;
   opacity: 0;
