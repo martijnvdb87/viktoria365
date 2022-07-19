@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import profilePicture from '@/assets/images/profile-picture.jpg';
 </script>
 
 <template>
   <div class="profile">
     <figure>
-      <img src="https://avatars.githubusercontent.com/u/41451264">
+      <img :src="profilePicture">
       <figcaption>Martijn van den Bosch</figcaption>
     </figure>
     <header>
