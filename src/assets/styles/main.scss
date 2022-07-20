@@ -1,9 +1,16 @@
+:root,
+::before,
+::after {
+  --scrollbar-width: 0.75rem;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 1.0625rem;
   color: var(--gray-700);
   font-weight: 350;
   line-height: 1.65;
+  max-width: calc(100vw - var(--scrollbar-width));
 }
 
 @media only screen and (min-width: 52rem) {
@@ -32,4 +39,17 @@ body {
     display: block;
     flex: 0 0 18rem;
   }
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+ 
+::-webkit-scrollbar-track {
+  background-color: var(--gray-50);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-200);
+  border: 0.0625rem solid var(--gray-50);
 }
