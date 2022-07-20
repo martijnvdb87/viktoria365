@@ -10,7 +10,11 @@ import Menu from '@/components/Menu.vue';
     </div>
     <Menu />
     <div class="app__content">
-      <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
     </div>
   </main>
 </template>
@@ -30,5 +34,13 @@ import Menu from '@/components/Menu.vue';
 
 .app__content {
   padding: 1.5rem;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 240ms ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
