@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import profilePicture from '@/assets/images/profile-picture.jpg';
+import Status from '@/components/Status.vue';
 </script>
 
 <template>
@@ -7,10 +8,11 @@ import profilePicture from '@/assets/images/profile-picture.jpg';
     <figure>
       <img :src="profilePicture">
       <figcaption>Martijn van den Bosch</figcaption>
+      <Status></Status>
     </figure>
     <header>
       <h1>Martijn van den Bosch</h1>
-      <p>Full Stack Developer</p>
+      <p>Senior full-stack developer</p>
     </header>
   </div>
 </template>
@@ -22,20 +24,25 @@ import profilePicture from '@/assets/images/profile-picture.jpg';
   gap: 1.5rem;
 
   figure {
-    width: 7.5rem;
-    aspect-ratio: 1;
-    border-radius: 999rem;
-    background-color: var(--gray-100);
-    overflow: hidden;
+    position: relative;
 
     img {
-      width: 100%;
-      height: 100%;
+      width: 7.5rem;
+      height: 7.5rem;
       border: none;
+      border-radius: 999rem;
+      overflow: hidden;
+      background-color: var(--gray-100);
     }
 
     figcaption {
       display: none;
+    }
+
+    .status {
+      position: absolute;
+      bottom: 0;
+      left: calc(100% - 2.5rem);
     }
   }
 
@@ -43,6 +50,7 @@ import profilePicture from '@/assets/images/profile-picture.jpg';
     display: flex;
     flex-direction: column;
     justify-content: center;
+    line-height: 1.45;
 
     h1 {
       font-weight: 600;
