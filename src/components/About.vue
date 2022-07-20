@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Segment from '@/components/Segment.vue';
 import Label from '@/components/Label.vue';
+import LabelCloud from '@/components/LabelCloud.vue';
 import Link from '@/components/Link.vue';
 </script>
 
@@ -17,7 +18,7 @@ import Link from '@/components/Link.vue';
         <p>Besides watching series on Netflix and spending time with my wife, I like working on multiple <Link href="/projects/">personal projects</Link>.</p>
       </Segment>
       <Segment title="Tech stack" icon="code">
-        <div class="label-cloud">
+        <LabelCloud>
           <Label>PHP</Label>
           <Label>Javascript</Label>
           <Label>Typescript</Label>
@@ -48,7 +49,8 @@ import Link from '@/components/Link.vue';
           <Label>PWA</Label>
           <Label>Wordpress</Label>
           <Label>Moodle</Label>
-        </div>
+          <Label>ActionScript</Label>
+        </LabelCloud>
       </Segment>
     </div>
     <aside class="columns__column">
@@ -75,9 +77,4 @@ import Link from '@/components/Link.vue';
 </template>
 
 <style scoped lang="scss">
-.label-cloud {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
 </style>
