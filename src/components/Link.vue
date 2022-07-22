@@ -37,7 +37,6 @@ const isInternalLink = computed(() => {
 <style scoped lang="scss">
 .link {
   display: inline-block;
-  padding: 0 0.0625rem;
   color: var(--gray-700);
   font-weight: 450;
   text-decoration-color: var(--blue-350);
