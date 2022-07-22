@@ -53,3 +53,9 @@ body {
   background-color: var(--gray-200);
   border: 0.0625rem solid var(--gray-50);
 }
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gray-250);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--gray-350);
+}
