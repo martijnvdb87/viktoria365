@@ -47,11 +47,14 @@ const menuItems: MenuItem[] = [{
   name: 'About',
   path: '/'
 },{
-  name: 'Resume',
-  path: '/resume/'
+  name: 'Work',
+  path: '/work/'
 },{
   name: 'Projects',
   path: '/projects/'
+},{
+  name: 'Education',
+  path: '/education/'
 }];
 
 const menu = ref();
@@ -79,6 +82,7 @@ watch(route, () => {
   padding: 0;
   list-style: none;
   isolation: isolate;
+  flex-wrap: wrap;
 }
 
 .menu__item {

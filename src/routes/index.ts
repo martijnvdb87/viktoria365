@@ -1,8 +1,8 @@
-import { ref } from 'vue';
 import { RouteRecordRaw } from 'vue-router';
 
 import About from './../components/About.vue';
-import Resume from './../components/Resume.vue';
+import Education from '../components/Education.vue';
+import Work from './../components/Work.vue';
 import Projects from './../components/Projects.vue';
 
 export const routes: RouteRecordRaw[] = [{
@@ -10,11 +10,15 @@ export const routes: RouteRecordRaw[] = [{
   name: 'About',
   component: About
 },{
-  path: '/resume/',
-  name: 'Resume',
-  component: Resume
+  path: '/work/',
+  name: 'Work',
+  component: Work
 },{
   path: '/projects/',
   name: 'Projects',
   component: Projects
+},{
+  path: '/education/',
+  name: 'Education',
+  component: Education
 }];
