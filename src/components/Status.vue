@@ -299,6 +299,5 @@ label {
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  transform: translateY(-1px);
 }
 </style>
