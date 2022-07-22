@@ -9,7 +9,7 @@ import Link from '@/components/Link.vue';
   <section class="columns">
     <div class="columns__column">
       <Segment title="Introduction" icon="user">
-        <p>I'm a self-thought full stack developer from the Netherlands. I started developing websites when I was 12 years old and today, more than 20 years later, I still love every second of it.</p>
+        <p>I'm a self-taught senior full-stack developer from the Netherlands. I started developing websites when I was 12 years old and today, more than 20 years later, I still love every second of it.</p>
       </Segment>
       <Segment title="Work" icon="briefcase">
         <p>Currently, I'm working as lead developer at <Link href="https://www.skillstown.com" target="_blank">SkillsTown</Link>, which is a company part of the <Link href="https://www.saltagroup.com" target="_blank">Salta Group</Link> (formerly known as the NCOI Group). We are improving and maintaining two online learning platforms. The first one uses the <Link href="https://en.wikipedia.org/wiki/LAMP_(software_bundle)" target="_blank">LAMP stack</Link> (PHP & MySQL) and a custom in-house built Javascript framework (some parts use React). The second platform is using .NET for the backend and Vue for the frontend using Typescript.</p>
@@ -17,7 +17,7 @@ import Link from '@/components/Link.vue';
       <Segment title="Free time" icon="smile">
         <p>Besides watching series on Netflix and spending time with my wife, I like working on multiple <Link href="/projects/">personal projects</Link>.</p>
       </Segment>
-      <Segment title="Tech stack" icon="code">
+      <Segment title="Skills" icon="code">
         <LabelCloud>
           <Label>PHP</Label>
           <Label>Javascript</Label>
@@ -49,6 +49,7 @@ import Link from '@/components/Link.vue';
           <Label>PWA</Label>
           <Label>Wordpress</Label>
           <Label>Moodle</Label>
+          <Label>Composer</Label>
           <Label>ActionScript</Label>
         </LabelCloud>
       </Segment>
@@ -67,7 +68,7 @@ import Link from '@/components/Link.vue';
         <Link href="https://www.linkedin.com/in/martijn-van-den-bosch-8a6574190" target="_blank" variant="simple">https://www.linkedin.com/in/martijn-van-den-bosch-8a6574190</Link>
       </Segment>
       <Segment format="small" title="CodePen" icon="codepen">
-        <Link href="https://codepen.io/Martijnvdb87" target="_blank" variant="simple">https://codepen.io/Martijnvdb87</Link>
+        <Link href="https://codepen.io/martijnvdb87" target="_blank" variant="simple">https://codepen.io/martijnvdb87</Link>
       </Segment>
       <Segment format="small" title="Email" icon="mail">
         <Link href="mailto:martijnvdb87@gmail.com" target="_blank" variant="simple">martijnvdb87@gmail.com</Link>
