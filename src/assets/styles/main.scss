@@ -6,6 +6,12 @@
   --scrollbar-width: 0.75rem;
 }
 
+@page {
+  size: 210mm 297mm; 
+  /* Chrome sets own margins, we change these printer settings */
+  margin: 0mm; 
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 1.0625rem;
@@ -18,6 +24,46 @@ body {
 
   &[data-page="resume"] {
     background-color: var(--background-resume);
+  }
+}
+
+@media print {
+  html,
+  body {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    background-color: transparent;
+    overflow: hidden;
+  }
+
+  html {
+    font-size: 0.66665rem;
+  }
+
+  .menu {
+    display: none !important;
+  }
+
+  .resume {
+    aspect-ratio: initial !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    padding: 0rem !important;
+    box-shadow: none !important;
+    background-color: transparent;
+    
+    .resume__document,
+    .resume__document-content {
+      aspect-ratio: initial !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      transform: none !important;
+    }
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0rem !important;
   }
 }
 
