@@ -53,7 +53,7 @@ const updateStatus = async (): Promise<void> => {
     icon.value = currentActivity.icon;
 
     setTimeout(() => {
-      status.value.style.setProperty(
+      status.value?.style.setProperty(
         '--status-width',
         `${statusLabel.value.offsetWidth}px`
       );
