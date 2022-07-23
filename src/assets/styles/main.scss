@@ -1,6 +1,8 @@
 :root,
 ::before,
 ::after {
+  --background-main: #ffffff;
+  --background-resume: var(--gray-50);
   --scrollbar-width: 0.75rem;
 }
 
@@ -11,6 +13,17 @@ body {
   font-weight: 350;
   line-height: 1.65;
   max-width: calc(100vw - var(--scrollbar-width));
+  background-color: var(--background-main);
+  transition: background-color 480ms ease;
+
+  &[data-page="resume"] {
+    background-color: var(--background-resume);
+  }
+}
+
+.container {
+  max-width: 50rem;
+  margin: auto;
 }
 
 @media only screen and (min-width: 52rem) {
@@ -26,6 +39,10 @@ body {
 }
 
 @media only screen and (min-width: 80rem) {
+  .container {
+    max-width: 74rem;
+  }
+  
   .columns {
     display: flex;
     gap: 6rem;
