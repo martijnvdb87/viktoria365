@@ -1,40 +1,32 @@
 <script setup lang="ts">
+import { getCurrentRoute } from '@/routes';
 import Profile from '@/components/Profile.vue';
 import Menu from '@/components/Menu.vue';
 </script>
 
 <template>
   <main class="app__main">
-    <div class="app__content">
-      <Profile />
-    </div>
+    <Transition>
+      <div v-if="getCurrentRoute?.name !== 'Resume'" class="app__profile">
+        <div class="container">
+          <Profile :status="true" />
+        </div>
+      </div>
+    </Transition>
     <Menu />
-    <div class="app__content">
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
         <component :is="Component" />
       </transition>
     </router-view>
-    </div>
   </main>
 </template>
 
-<style scoped>
-.app__main {
-  max-width: 50rem;
-  padding: 1rem 0rem;
-  margin: auto;
+<style scoped lang="scss">
+.app__profile {
+  background-color: var(--background-main);
 }
 
-@media only screen and (min-width: 80rem) {
-  .app__main {
-    max-width: 74rem;
-  }
-}
-
-.app__content {
-  padding: 1.5rem;
-}
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 240ms ease;
@@ -42,5 +34,27 @@ import Menu from '@/components/Menu.vue';
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.v-enter-active,
+.v-leave-active {
+  max-height: 10.5rem;
+  transition: all 480ms ease;
+
+  .profile {
+    transform: none;
+    transition: all 480ms ease;
+  }
+}
+
+.v-enter-from,
+.v-leave-to {
+  max-height: 0rem;
+
+  .profile {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 480ms ease;
+  }
 }
 </style>

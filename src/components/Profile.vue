@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import profilePicture from '@/assets/images/profile-picture.jpg';
 import Status from '@/components/Status.vue';
+
+const props = withDefaults(defineProps<{
+  status?: boolean
+}>(), {
+  status: false
+});
 </script>
 
 <template>
@@ -8,7 +14,7 @@ import Status from '@/components/Status.vue';
     <figure>
       <img :src="profilePicture">
       <figcaption>Martijn van den Bosch</figcaption>
-      <Status></Status>
+      <Status v-if="props.status"></Status>
     </figure>
     <header>
       <h1>Martijn van den Bosch</h1>
@@ -22,6 +28,7 @@ import Status from '@/components/Status.vue';
   display: grid;
   grid-template-columns: 8rem 1fr;
   gap: 1.5rem;
+  padding: 1.5rem;
 
   figure {
     position: relative;

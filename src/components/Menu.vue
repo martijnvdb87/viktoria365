@@ -20,9 +20,14 @@ const animateMenuIndicator = (): void => {const currentMenuItemIndex = menuItems
     const previousRect = previousIndicator.getBoundingClientRect();
 
     const currentElement = menu.value[currentMenuItemIndex];
-    const currentIndicator = currentElement.querySelector('.menu__item-indicator');
-    const currentIndicatorInner = currentElement.querySelector('.menu__item-indicator-inner');
-    const currentRect = currentIndicator.getBoundingClientRect();
+
+    if(!currentElement) {
+      return;
+    }
+
+    const currentIndicator = currentElement?.querySelector('.menu__item-indicator');
+    const currentIndicatorInner = currentElement?.querySelector('.menu__item-indicator-inner');
+    const currentRect = currentIndicator?.getBoundingClientRect();
 
     const offsetX = previousRect.x - currentRect.x;
     const offsetY = previousRect.y - currentRect.y;
@@ -55,6 +60,9 @@ const menuItems: MenuItem[] = [{
 },{
   name: 'Education',
   path: '/education/'
+},{
+  name: 'Resume',
+  path: '/resume/'
 }];
 
 const menu = ref();
@@ -66,23 +74,32 @@ watch(route, () => {
 </script>
 
 <template>
-  <ol class="menu">
-    <li ref="menu" v-for="{name, path} in menuItems" :class="['menu__item', route.path === path ? 'menu__item--active' : '']">
-      <router-link :data-text="name" :to="path">{{name}}</router-link>
-      <div class="menu__item-indicator">
-        <div class="menu__item-indicator-inner"></div>
-      </div>
-    </li>
-  </ol>
+  <div class="menu">
+    <div class="container">
+      <ol class="menu__list">
+        <li ref="menu" v-for="{name, path} in menuItems" :class="['menu__item', route.path === path ? 'menu__item--active' : '']">
+          <router-link :data-text="name" :to="path">{{name}}</router-link>
+          <div class="menu__item-indicator">
+            <div class="menu__item-indicator-inner"></div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
 </template>
 
 <style scoped lang="scss">
 .menu {
+  background-color: var(--background-main);
+}
+.menu__list {
   display: flex;
   padding: 0;
+  margin: 0;
   list-style: none;
   isolation: isolate;
   flex-wrap: wrap;
+  background-color: var(--background-main);
 }
 
 .menu__item {
