@@ -5,6 +5,7 @@ import iconBriefcase from '@/assets/icons/briefcase.svg?raw';
 import iconCode from '@/assets/icons/code.svg?raw';
 import iconCodepen from '@/assets/icons/codepen.svg?raw';
 import iconExternalLink from '@/assets/icons/external-link.svg?raw';
+import iconFileText from '@/assets/icons/file-text.svg?raw';
 import iconGithub from '@/assets/icons/github.svg?raw';
 import iconLink from '@/assets/icons/link.svg?raw';
 import iconLinkedin from '@/assets/icons/linkedin.svg?raw';
@@ -23,6 +24,7 @@ const icon = computed(() => {
     case 'code': return iconCode;
     case 'codepen': return iconCodepen;
     case 'external-link': return iconExternalLink;
+    case 'file-text': return iconFileText;
     case 'github': return iconGithub;
     case 'link': return iconLink;
     case 'linkedin': return iconLinkedin;

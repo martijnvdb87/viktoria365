@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import profilePicture from '@/assets/images/profile-picture.jpg';
 import Status from '@/components/Status.vue';
+import DownloadResume from '@/components/DownloadResume.vue';
 
 const props = withDefaults(defineProps<{
   status?: boolean
@@ -19,6 +20,7 @@ const props = withDefaults(defineProps<{
     <header>
       <h1>Martijn van den Bosch</h1>
       <p>Senior full-stack developer</p>
+      <DownloadResume />
     </header>
   </div>
 </template>
@@ -26,12 +28,13 @@ const props = withDefaults(defineProps<{
 <style scoped lang="scss">
 .profile {
   display: grid;
-  grid-template-columns: 8rem 1fr;
+  grid-template-columns: 7.5rem 1fr;
   gap: 1.5rem;
   padding: 1.5rem;
 
   figure {
     position: relative;
+    z-index: 1;
 
     img {
       width: 7.5rem;
@@ -54,6 +57,7 @@ const props = withDefaults(defineProps<{
   }
 
   header {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;

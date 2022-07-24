@@ -18,7 +18,7 @@ const isInternalLink = computed(() => {
 });
 </script>
 
-<template>
+<template>  
   <router-link v-if="isInternalLink" :to="props.href" :class="['link', `link--variant-${props.variant}`]">
     <span class="link__text">
       <slot></slot>

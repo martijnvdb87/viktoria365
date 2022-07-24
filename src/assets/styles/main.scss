@@ -60,6 +60,10 @@ body {
       height: 100vh !important;
       transform: none !important;
     }
+
+    .download-resume {
+      display: none;
+    }
   }
   
   ::-webkit-scrollbar {

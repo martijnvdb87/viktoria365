@@ -10,32 +10,47 @@ const props = withDefaults(defineProps<{
 
 const labels = [
   'PHP',
-  'Javascript',
-  'Typescript',
-  'C# .NET',
-  'SQL',
-  'MongoDB',
-  'HTML',
-  'CSS',
-  'UI/UX',
   'Laravel',
   'Composer',
+  'Javascript',
+  'Typescript',
+  'NPM',
+  'Yarn',
+  'Node.js',
   'React',
   'Vue',
   'Svelte',
   'Web Components',
-  'Node.js',
-  'REST API',
-  'Git',
+  'Webpack',
+  'Vite',
+  'SQL',
+  'MongoDB',
+  'C# .NET',
+  'HTML',
+  'CSS',
   'SASS',
+  'BEM',
+  'SEO',
+  'PWA',
+  'UI/UX',
+  'Git',
+  'REST API',
+  'SOAP',
   'JSON',
+  'JWT',
   'OpenID Connect',
   'SAML',
   'OAuth',
-  'OAuth 2.0',
-  'PWA',
   'Wordpress',
   'Moodle',
+  'Jest',
+  'PHPUnit',
+  'Docker',
+  'Vagrant',
+  'CI/CD',
+  'SSH',
+  'Redis',
+  'Memcached',
 ];
 
 const validLabel = (label: string): boolean => {
@@ -44,7 +59,7 @@ const validLabel = (label: string): boolean => {
 </script>
 
 <template>
-  <div class="label-cloud">
+  <div class="skills">
     <template v-for="label in labels">
       <Label v-if="validLabel(label) || props.showAll">{{label}}</Label>
     </template>
@@ -52,7 +67,7 @@ const validLabel = (label: string): boolean => {
 </template>
 
 <style scoped lang="scss">
-.label-cloud {
+.skills {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;

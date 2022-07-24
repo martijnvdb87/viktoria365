@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, Ref } from 'vue';
 import Profile from '@/components/Profile.vue';
-import LabelCloud from '@/components/LabelCloud.vue';
+import Skills from '@/components/Skills.vue';
 import Work from '@/components/Work.vue';
 import Education from '@/components/Education.vue';
 import Info from '@/components/Info.vue';
 import QrCode from '@/components/QrCode.vue';
+import Introduction from '@/components/Introduction.vue';
+import DownloadResume from '@/components/DownloadResume.vue';
 
 const resume: Ref<HTMLElement | undefined> = ref();
 const resumeDocument: Ref<HTMLElement | undefined> = ref();
@@ -48,6 +50,7 @@ const updateResumeContentScale = (): void => {
 
 <template>
   <div ref="resume" class="resume">
+    <DownloadResume />
     <div ref="resumeDocument" class="resume__document">
       <div class="resume__document-content">
         <div class="resume__document-content-padding">
@@ -56,9 +59,7 @@ const updateResumeContentScale = (): void => {
           <Info />
           <hr>
           <h3>Introduction</h3>
-          <div class="introduction">
-            <p>I'm a self-taught senior full-stack developer from the Netherlands. I started developing websites when I was 12 years old and today, more than 20 years later, I still love every second of it.</p>
-          </div>
+          <Introduction />
           <hr>
           <h3>Work</h3>
           <Work />
@@ -67,7 +68,7 @@ const updateResumeContentScale = (): void => {
           <Education />
           <hr>
           <h3>Skills</h3>
-          <LabelCloud show-all />
+          <Skills show-all />
         </div>
       </div>
     </div>
@@ -79,7 +80,7 @@ const updateResumeContentScale = (): void => {
   --resume-full-width: 315mm;
   --resume-aspect-ratio: 210 / 297;
   --resume-content-scale: 1;
-  padding: 3rem 1.5rem;
+  padding: 3rem;
 
   .resume__document {
     width: var(--resume-full-width);
@@ -127,13 +128,11 @@ const updateResumeContentScale = (): void => {
     }
 
     ul {
-      display: flex;
-      flex-wrap: wrap;
+      column-count: 2;
       gap: 0 3rem;
       padding-left: 1.5rem;
 
       li {
-        width: calc(50% - 1.5rem);
         margin-bottom: auto;
       }
     }
@@ -150,9 +149,26 @@ const updateResumeContentScale = (): void => {
     }
   }
 
+  .download-resume {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 50%;
+    z-index: 10;
+    transform: translateX(50%);
+
+    .download-resume__link {
+      border-radius: 999rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+  }
+
   .profile {
     padding: 0;
     margin-bottom: 2rem;
+
+    .download-resume {
+      display: none;
+    }
   }
 
   .qr-code {
@@ -172,6 +188,10 @@ const updateResumeContentScale = (): void => {
   .introduction {
     margin-bottom: 2rem;
 
+    .segment__header {
+      display: none;
+    }
+
     p {
       font-size: 0.9375rem;
       margin-bottom: 1rem;
@@ -179,13 +199,11 @@ const updateResumeContentScale = (): void => {
   }
 
   .info {
-    display: flex;
-    flex-wrap: wrap;
+    column-count: 2;
     gap: 0 3rem;
     margin-bottom: 1rem;
 
     .segment {
-      width: calc(50% - 1.5rem);
       margin-bottom: 1rem;
     }
 
@@ -201,7 +219,7 @@ const updateResumeContentScale = (): void => {
       max-width: none;
     }
 
-    .label-cloud {
+    .skills {
       display: none;
     }
 
@@ -221,14 +239,12 @@ const updateResumeContentScale = (): void => {
       display: none;
     }
     .columns__column {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0 3rem;
-
-      .segment {
-        width: calc(50% - 1.5rem);
-      }
+      column-count: 2;
     }
+  }
+
+  .skills {
+    justify-content: space-between;
   }
 }
 </style>
