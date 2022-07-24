@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Sleeping",
+    "icon": "😴",
+    "date": "daily",
+    "time": ["22:45", "23:45"],
+    "duration": ["07:45", "08:15"],
+    "priority": 20
+  },
+  {
+    "name": "Afternoon walk",
+    "icon": "🚶‍♂️",
+    "date": "daily",
+    "time": ["12:30", "14:00"],
+    "duration": ["00:15", "00:30"],
+    "priority": 70
+  },
+  {
+    "name": "Working at SkillsTown",
+    "icon": "👨‍💻",
+    "date": "workday",
+    "time": ["08:00", "08:45"],
+    "duration": ["08:15", "08:45"],
+    "priority": 80
+  },
+  {
+    "name": "Exercising",
+    "icon": "🏋️",
+    "date": "daily",
+    "time": ["16:45", "17:15"],
+    "duration": ["00:30", "01:00"],
+    "priority": 100
+  },
+  {
+    "name": "Working on personal projects",
+    "icon": "💻",
+    "date": "daily",
+    "time": ["20:00", "21:30"],
+    "duration": ["00:30", "02:00"],
+    "priority": 160
+  },
+  {
+    "name": "Watching Netflix",
+    "icon": "📺",
+    "date": "daily",
+    "time": ["19:00", "19:30"],
+    "duration": ["01:00", "02:00"],
+    "priority": 200
+  },
+  {
+    "name": "Listening to music",
+    "icon": "🎧",
+    "date": "daily",
+    "time": ["11:00", "14:00"],
+    "duration": ["03:00", "05:00"],
+    "priority": 400
+  }
+]
