@@ -8,7 +8,7 @@ import Introduction from '@/components/Introduction.vue';
 
 <template>
   <div class="about">
-  <div class="container">
+    <div class="container">
       <section class="columns">
         <div class="columns__column">
           <Introduction />

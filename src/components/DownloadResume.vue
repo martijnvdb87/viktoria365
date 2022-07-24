@@ -37,7 +37,6 @@ import resumeLink from '@/assets/martijn-van-den-bosch-resume-full-stack-develop
     &:focus-visible {
       z-index: 1;
       outline: 0.1875rem solid var(--blue-350);
-      background-color: var(--gray-50);
     }
 
     &:active {

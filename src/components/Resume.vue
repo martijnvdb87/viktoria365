@@ -50,7 +50,6 @@ const updateResumeContentScale = (): void => {
 
 <template>
   <div ref="resume" class="resume">
-    <DownloadResume />
     <div ref="resumeDocument" class="resume__document">
       <div class="resume__document-content">
         <div class="resume__document-content-padding">
@@ -72,6 +71,7 @@ const updateResumeContentScale = (): void => {
         </div>
       </div>
     </div>
+    <DownloadResume />
   </div>
 </template>
 
@@ -87,7 +87,7 @@ const updateResumeContentScale = (): void => {
     max-width: 100%;
     aspect-ratio: var(--resume-aspect-ratio);
     margin: auto;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     background-color: #ffffff;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
     overflow: hidden;

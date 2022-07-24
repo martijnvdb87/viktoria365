@@ -13,6 +13,12 @@ const router: Router = createRouter({
   routes
 });
 
+router.afterEach(() => {
+  setTimeout(() => {
+    document.body.classList.remove('preload');
+  }, 100);
+});
+
 router.beforeEach((to: RouteLocationNormalized, _: RouteLocationNormalized, next: NavigationGuardNext): void => {
   const route = routes.find(route => route.name === to.name) ?? null;
   setCurrentRoute(route);
