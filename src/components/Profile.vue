@@ -27,14 +27,16 @@ const props = withDefaults(defineProps<{
 
 <style scoped lang="scss">
 .profile {
-  display: grid;
-  grid-template-columns: 7.5rem 1fr;
+  display: flex;
   gap: 1.5rem;
   padding: 1.5rem;
+  align-items: center;
 
   figure {
     position: relative;
     z-index: 1;
+    height: 7.5rem;
+    flex: 0 0 7.5rem;
 
     img {
       width: 7.5rem;
@@ -62,6 +64,7 @@ const props = withDefaults(defineProps<{
     flex-direction: column;
     justify-content: center;
     line-height: 1.45;
+    flex: 1 0 0;
 
     h1 {
       font-weight: 600;
