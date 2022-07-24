@@ -80,7 +80,15 @@ const updateResumeContentScale = (): void => {
   --resume-full-width: 315mm;
   --resume-aspect-ratio: 210 / 297;
   --resume-content-scale: 1;
-  padding: 3rem;
+  padding: 1rem 1rem 6rem 1rem;
+
+  @media only screen and (min-width: 52rem) {
+    padding: 2rem 2rem 6rem 2rem;
+  }
+
+  @media only screen and (min-width: 80rem) {
+    padding: 3rem 3rem 6rem 3rem;
+  }
 
   .resume__document {
     width: var(--resume-full-width);
@@ -151,7 +159,7 @@ const updateResumeContentScale = (): void => {
 
   .download-resume {
     position: fixed;
-    bottom: 1.5rem;
+    bottom: 1.25rem;
     right: 50%;
     z-index: 10;
     transform: translateX(50%);

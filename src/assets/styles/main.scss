@@ -18,9 +18,9 @@ body {
   color: var(--gray-700);
   font-weight: 350;
   line-height: 1.65;
-  max-width: calc(100vw - var(--scrollbar-width));
   background-color: var(--background-main);
   transition: background-color 480ms ease;
+  overflow: overlay;
 
   &[data-page="resume"] {
     background-color: var(--background-resume);
