@@ -9,8 +9,8 @@ import qrCode from '@/assets/images/qr-code.svg';
       For projects and more visit
       <Link href="https://martijnvandenbosch.com" target="_blank">martijnvandenbosch.com</Link>
     </p>
-    <a class="qr-code__link" href="https://martijnvandenbosch.com" target="_blank">
-      <img :src="qrCode">
+    <a class="qr-code__link" href="https://martijnvandenbosch.com" aria-label="martijnvandenbosch.com" target="_blank">
+      <img :src="qrCode" alt="martijnvandenbosch.com">
     </a>
   </div>
 </template>

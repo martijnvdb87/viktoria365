@@ -21,8 +21,8 @@ import resumeLink from '@/assets/martijn-van-den-bosch-resume-full-stack-develop
     display: inline-flex;
     text-decoration: none;
     gap: 0.5rem;
-    color: var(--blue-25);
-    background-color: var(--blue-425);
+    color: #ffffff;
+    background-color: var(--blue-450);
     padding: 0.625rem 0.75rem;
     border-radius: 0.25rem;
     font-size: 0.9375rem;
@@ -31,7 +31,7 @@ import resumeLink from '@/assets/martijn-van-den-bosch-resume-full-stack-develop
     transition: transform ease 240ms, color ease 240ms, background-color ease 240ms;
     
     &:hover {
-      background-color: var(--blue-525);
+      background-color: var(--blue-550);
     }
 
     &:focus-visible {

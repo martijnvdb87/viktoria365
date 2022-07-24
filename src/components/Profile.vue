@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<{
 <template>
   <div class="profile">
     <figure>
-      <img :src="profilePicture">
+      <img :src="profilePicture" alt="Martijn van den Bosch">
       <figcaption>Martijn van den Bosch</figcaption>
       <Status v-if="props.status"></Status>
     </figure>
