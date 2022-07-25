@@ -25,19 +25,27 @@ const animateMenuIndicator = (): void => {const currentMenuItemIndex = menuItems
       return;
     }
 
+    const previousAnchor = previousElement?.querySelector('a');
+    const currentAnchor = currentElement?.querySelector('a');
     const currentIndicator = currentElement?.querySelector('.menu__item-indicator');
     const currentIndicatorInner = currentElement?.querySelector('.menu__item-indicator-inner');
     const currentRect = currentIndicator?.getBoundingClientRect();
 
+    const previousAnchorComputedStyle = getComputedStyle(previousAnchor);
+    const currentAnchorComputedStyle = getComputedStyle(currentAnchor);
+
     const offsetX = previousRect.x - currentRect.x;
     const offsetY = previousRect.y - currentRect.y;
-    const scaleX = previousRect.width / currentRect.width;
-    const scaleY = previousRect.height / currentRect.height;
+
+    const previousAnchorWidth = previousAnchor.clientWidth - (parseFloat(previousAnchorComputedStyle.paddingLeft) + parseFloat(previousAnchorComputedStyle.paddingRight));
+    const currentAnchorWidth = currentAnchor.clientWidth - (parseFloat(currentAnchorComputedStyle.paddingLeft) + parseFloat(currentAnchorComputedStyle.paddingRight));
+
+    const scaleX = previousAnchorWidth / currentAnchorWidth;
 
     currentIndicator.style.transitionDuration = '0ms';
     currentIndicatorInner.style.transitionDuration = '0ms';
     currentIndicator.style.transform = `translateX(${offsetX}px) translateY(${offsetY}px)`;
-    currentIndicatorInner.style.transform = `scaleX(${scaleX}) scaleY(${scaleY})`;
+    currentIndicatorInner.style.transform = `scaleX(${scaleX})`;
 
     setTimeout(() => {
       currentIndicator.style.transitionDuration = '';
