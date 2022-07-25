@@ -60,10 +60,17 @@ body {
       height: 100vh !important;
       transform: none !important;
     }
+  }
+  .download-resume {
+    display: none !important;
+  }
 
-    .download-resume {
-      display: none;
-    }
+  .education + hr {
+    margin-top: -0.75rem !important;
+  }
+
+  .skills {
+    padding-top: 1rem !important;
   }
   
   ::-webkit-scrollbar {

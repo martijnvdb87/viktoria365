@@ -7,7 +7,6 @@ import Education from '@/components/Education.vue';
 import Info from '@/components/Info.vue';
 import QrCode from '@/components/QrCode.vue';
 import Introduction from '@/components/Introduction.vue';
-import DownloadResume from '@/components/DownloadResume.vue';
 
 const resume: Ref<HTMLElement | undefined> = ref();
 const resumeDocument: Ref<HTMLElement | undefined> = ref();
