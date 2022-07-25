@@ -1,24 +1,25 @@
 <script setup lang="ts">
-import { getCurrentRoute } from '@/routes';
 import Profile from '@/components/Profile.vue';
 import Menu from '@/components/Menu.vue';
+import DownloadResume from '@/components/DownloadResume.vue';
 </script>
 
 <template>
   <main class="app__main">
-    <Transition>
-      <div v-if="getCurrentRoute?.name !== 'Resume'" class="app__profile">
-        <div class="container">
-          <Profile :status="true" />
-        </div>
+    <div class="app__profile">
+      <div class="container">
+        <Profile :status="true" />
       </div>
-    </Transition>
+    </div>
     <Menu />
-    <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <component :is="Component" />
-      </transition>
-    </router-view>
+    <div class="app__content">
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </div>
+    <DownloadResume class="download-resume--resume" />
   </main>
 </template>
 
@@ -34,27 +35,5 @@ import Menu from '@/components/Menu.vue';
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-}
-
-.v-enter-active,
-.v-leave-active {
-  max-height: 10.5rem;
-  transition: all 480ms ease;
-
-  .profile {
-    transform: none;
-    transition: all 480ms ease;
-  }
-}
-
-.v-enter-from,
-.v-leave-to {
-  max-height: 0rem;
-
-  .profile {
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: all 480ms ease;
-  }
 }
 </style>

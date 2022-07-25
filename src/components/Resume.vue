@@ -71,7 +71,6 @@ const updateResumeContentScale = (): void => {
         </div>
       </div>
     </div>
-    <DownloadResume />
   </div>
 </template>
 
@@ -95,7 +94,7 @@ const updateResumeContentScale = (): void => {
     max-width: 100%;
     aspect-ratio: var(--resume-aspect-ratio);
     margin: auto;
-    margin-bottom: 0.5rem;
+    margin-bottom: -10rem;
     background-color: #ffffff;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
     overflow: hidden;
@@ -157,21 +156,9 @@ const updateResumeContentScale = (): void => {
     }
   }
 
-  .download-resume {
-    position: fixed;
-    bottom: 1.25rem;
-    right: 50%;
-    z-index: 10;
-    transform: translateX(50%);
-
-    .download-resume__link {
-      border-radius: 999rem;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    }
-  }
-
   .profile {
     padding: 0;
+    height: auto;
     margin-bottom: 2rem;
 
     .download-resume {

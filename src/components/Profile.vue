@@ -29,7 +29,8 @@ const props = withDefaults(defineProps<{
 .profile {
   display: flex;
   gap: 1.5rem;
-  padding: 1.5rem;
+  height: 10.5rem;
+  padding: 0rem 1.5rem;
   align-items: center;
 
   figure {

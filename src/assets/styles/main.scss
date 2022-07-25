@@ -134,3 +134,59 @@ body {
   -o-transition: none !important;
   transition: none !important;
 }
+
+.app__profile {
+  transition: transform ease 480ms;
+
+  .profile {
+    transition: opacity ease 480ms;
+  }
+}
+
+.menu {
+  transition: transform ease 480ms;
+}
+
+.app__content {
+  transition: transform ease 480ms;
+}
+
+.download-resume.download-resume--resume {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 50%;
+  z-index: 10;
+  pointer-events: none;
+  transform: translateX(50%) translateY(10.5rem);
+  transition: transform ease 480ms;
+
+  .download-resume__link {
+    border-radius: 999rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+}
+
+body[data-page="resume"] {
+  margin-bottom: -10.5rem;
+
+  .app__profile {
+    transform: translateY(-10.5rem);
+
+    .profile {
+      opacity: 0;
+    }
+  }
+  .menu {
+    transform: translateY(-10.5rem);
+  }
+
+  .app__content {
+    transform: translateY(-10.5rem);
+  }
+
+  .download-resume.download-resume--resume {
+    transform: translateX(50%);
+    pointer-events: all;
+    transition: transform ease 480ms 480ms;
+  }
+}
