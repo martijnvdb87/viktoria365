@@ -22,7 +22,7 @@ import Skills from '@/components/Skills.vue';
             </ul>
             <Skills :labels="['PHP', 'Javascript', 'Typescript', 'C# .NET', 'SQL', 'MongoDB', 'HTML', 'CSS', 'Laravel', 'React', 'Vue', 'Svelte', 'REST API', 'Git', 'SASS', 'JSON', 'OpenID Connect', 'SAML', 'OAuth', 'Wordpress', 'Moodle']" />
           </Segment>
-          <Segment title="Monversa Web Development" subtitle="Jule 2013 - February 2019 | Owner & full-stack developer" href="https://web.archive.org/web/20180831062310/https://monversa.nl/" target="_blank">
+          <Segment title="Monversa Web Development" subtitle="July 2013 - February 2019 | Owner & full-stack developer" href="https://web.archive.org/web/20180831062310/https://monversa.nl/" target="_blank">
             <ul>
               <li>Designed and developed my own Content Management System</li>
               <li>Setting up and maintaining Centos/Ubuntu, Apache/Nginx, PHP and MySQL servers</li>
