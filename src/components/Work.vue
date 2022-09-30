@@ -9,7 +9,10 @@ import Skills from '@/components/Skills.vue';
     <div class="container">
       <section class="columns">
         <div class="columns__column">
-          <Segment title="SkillsTown" subtitle="March 2019 - Present | Lead full-stack developer" href="https://skillstown.com/" target="_blank">
+          <Segment title="Ksyos" subtitle="October 2022 - Present | Senior full-stack developer" href="https://www.ksyos.nl/" target="_blank">
+            <Skills :labels="['Node.js', 'Javascript', 'Typescript', 'SQL', 'HTML', 'CSS', 'React', 'REST API', 'Git', 'SASS', 'JSON']" />
+          </Segment>
+          <Segment title="SkillsTown" subtitle="March 2019 - September 2022 | Lead full-stack developer" href="https://skillstown.com/" target="_blank">
             <ul>
               <li>Implemented <Link href="https://en.wikipedia.org/wiki/Learning_Tools_Interoperability" target="_blank">LTI 1.3</Link> which allowed us to contract the biggest customer in the history of the company</li>
               <li>Automated the <Link href="https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language" target="_blank">SAML SSO</Link> process which reduced the development time from 8 hours to 10 minutes</li>

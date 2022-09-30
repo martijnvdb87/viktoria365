@@ -123,11 +123,11 @@ const updateResumeContentScale = (): void => {
     border: none;
     border-bottom: 0.0625rem solid var(--gray-400);
     margin-top: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .segment {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 
     .segment__header {
       margin-bottom: 0.125rem;
