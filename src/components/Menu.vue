@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
+import { ref, watch, computed } from 'vue';
+import { RouteRecordRaw, useRoute } from 'vue-router';
+import { store } from '@/store';
+import { getTitleFromPath } from '@/enums';
 
 const route = useRoute();
 
 const afterMountedPath = ref('');
 
-type MenuItem = {
-  name: string,
-  path: string
-}
+const animateMenuIndicator = (): void => {
+  const currentMenuItemIndex = menuItems.value.findIndex(path => path.path === route.path);
+  const previousMenuItemIndex = menuItems.value.findIndex(path => path.path === afterMountedPath.value);
 
-const animateMenuIndicator = (): void => {const currentMenuItemIndex = menuItems.findIndex(path => path.path === route.path);
-  const previousMenuItemIndex = menuItems.findIndex(path => path.path === afterMountedPath.value);
+  if(currentMenuItemIndex < 0 || previousMenuItemIndex < 0) {
+    return;
+  }
 
   if(previousMenuItemIndex > -1) {
     const previousElement = menu.value[previousMenuItemIndex];
@@ -56,22 +58,12 @@ const animateMenuIndicator = (): void => {const currentMenuItemIndex = menuItems
   }
 };
 
-const menuItems: MenuItem[] = [{
-  name: 'About',
-  path: '/'
-},{
-  name: 'Work',
-  path: '/work/'
-},{
-  name: 'Projects',
-  path: '/projects/'
-},{
-  name: 'Education',
-  path: '/education/'
-},{
-  name: 'Resume',
-  path: '/resume/'
-}];
+const menuItems = computed<Partial<RouteRecordRaw>[]>(() => (
+  store.language ? store.language.menu.map(item => ({
+    name: item.name,
+    path: item.path
+  })) : []
+))
 
 const menu = ref();
 
@@ -85,8 +77,8 @@ watch(route, () => {
   <div class="menu">
     <div class="container">
       <ol class="menu__list">
-        <li ref="menu" v-for="{name, path} in menuItems" :class="['menu__item', route.path === path ? 'menu__item--active' : '']">
-          <router-link :data-text="name" :to="path">{{name}}</router-link>
+        <li ref="menu" v-for="{path} in menuItems" :class="['menu__item', route.path === path ? 'menu__item--active' : '']">
+          <router-link :data-text="getTitleFromPath(path ?? '')" :to="path ?? ''">{{getTitleFromPath(path ?? '')}}</router-link>
           <div class="menu__item-indicator">
             <div class="menu__item-indicator-inner"></div>
           </div>
@@ -104,6 +96,7 @@ watch(route, () => {
   display: flex;
   padding: 0;
   margin: 0;
+  min-height: 3rem;
   list-style: none;
   isolation: isolate;
   flex-wrap: wrap;

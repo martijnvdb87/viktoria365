@@ -1,26 +1,35 @@
 <script setup lang="ts">
 import profilePicture from '@/assets/images/profile-picture.jpg';
 import Status from '@/components/Status.vue';
-import DownloadResume from '@/components/DownloadResume.vue';
+import PlanIntake from '@/components/PlanIntake.vue';
+import Button from '@/components/Button.vue';
+import { setLanguage } from '@/enums';
+import { router } from '@/main';
 
 const props = withDefaults(defineProps<{
   status?: boolean
 }>(), {
   status: false
 });
+
+function switchLanguage() {
+  setLanguage(null);
+  router.push('/');
+}
 </script>
 
 <template>
   <div class="profile">
     <figure>
-      <img :src="profilePicture" alt="Martijn van den Bosch">
-      <figcaption>Martijn van den Bosch</figcaption>
+      <img :src="profilePicture" alt="Viktoria365">
+      <figcaption>Viktoria365</figcaption>
       <Status v-if="props.status"></Status>
     </figure>
     <header>
-      <h1>Martijn van den Bosch</h1>
-      <p>Senior full-stack developer</p>
-      <DownloadResume />
+      <h1>Viktoria365</h1>
+      <p></p>
+      <Button :action="switchLanguage">Language</Button>
+      <PlanIntake />
     </header>
   </div>
 </template>

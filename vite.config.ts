@@ -8,11 +8,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        work: resolve(__dirname, 'work/index.html'),
-        projects: resolve(__dirname, 'projects/index.html'),
-        education: resolve(__dirname, 'education/index.html'),
-        resume: resolve(__dirname, 'resume/index.html'),
+        languageSelector: resolve(__dirname, 'index.html'),
+        dutchHome: resolve(__dirname, 'nl/index.html'),
+        hungarianHome: resolve(__dirname, 'hu/index.html'),
+        englishHome: resolve(__dirname, 'en/index.html'),
+        dutchAbout: resolve(__dirname, 'nl/over-mij/index.html'),
       }
     }
   },

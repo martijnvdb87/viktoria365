@@ -2,7 +2,7 @@
 ::before,
 ::after {
   --background-main: #ffffff;
-  --background-resume: var(--gray-50);
+  --background-home: var(--gray-50);
   --scrollbar-width: 0.75rem;
 }
 
@@ -22,8 +22,8 @@ body {
   transition: background-color 480ms ease;
   overflow: overlay;
 
-  &[data-page="resume"] {
-    background-color: var(--background-resume);
+  &[data-page="languageselector"] {
+    background-color: var(--background-home);
   }
 }
 
@@ -45,32 +45,13 @@ body {
     display: none !important;
   }
 
-  .resume {
+  .home {
     aspect-ratio: initial !important;
     width: 100vw !important;
     height: 100vh !important;
     padding: 0rem !important;
     box-shadow: none !important;
     background-color: transparent;
-    
-    .resume__document,
-    .resume__document-content {
-      aspect-ratio: initial !important;
-      width: 100vw !important;
-      height: 100vh !important;
-      transform: none !important;
-    }
-  }
-  .download-resume {
-    display: none !important;
-  }
-
-  .education + hr {
-    margin-top: -0.75rem !important;
-  }
-
-  .skills {
-    padding-top: 1rem !important;
   }
   
   ::-webkit-scrollbar {
@@ -158,42 +139,21 @@ body {
   transition: transform ease 480ms;
 }
 
-.download-resume.download-resume--resume {
-  position: fixed;
-  bottom: 1.25rem;
-  right: 50%;
-  z-index: 10;
-  pointer-events: none;
-  transform: translateX(50%) translateY(10.5rem);
-  transition: transform ease 480ms;
-
-  .download-resume__link {
-    border-radius: 999rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  }
-}
-
-body[data-page="resume"] {
-  margin-bottom: -10.5rem;
+body[data-page="languageselector"] {
+  margin-bottom: -13.5rem;
 
   .app__profile {
-    transform: translateY(-10.5rem);
+    transform: translateY(-13.5rem);
 
     .profile {
       opacity: 0;
     }
   }
   .menu {
-    transform: translateY(-10.5rem);
+    transform: translateY(-13.5rem);
   }
 
   .app__content {
-    transform: translateY(-10.5rem);
-  }
-
-  .download-resume.download-resume--resume {
-    transform: translateX(50%);
-    pointer-events: all;
-    transition: transform ease 480ms 480ms;
+    transform: translateY(-13.5rem);
   }
 }

@@ -1,40 +1,39 @@
 import { Ref, ref, computed } from 'vue';
 import { RouteRecordRaw } from 'vue-router';
 
-import About from './../components/About.vue';
-import Education from '../components/Education.vue';
-import Work from './../components/Work.vue';
-import Projects from './../components/Projects.vue';
-import Resume from './../components/Resume.vue';
+import DutchAbout from '@/components/Dutch/About.vue';
+import DutchHome from '@/components/Dutch/Home.vue';
+import HungarianHome from '@/components/Hungarian/Home.vue';
+import EnglishHome from '@/components/English/Home.vue';
 
-const currentRoute: Ref<RouteRecordRaw | null> = ref(null);
+const currentRoute: Ref<Partial<RouteRecordRaw> | null> = ref(null);
 
-export const routes: RouteRecordRaw[] = [{
-  path: '/',
-  name: 'About',
-  component: About
-},{
-  path: '/work/',
-  name: 'Work',
-  component: Work
-},{
-  path: '/projects/',
-  name: 'Projects',
-  component: Projects
-},{
-  path: '/education/',
-  name: 'Education',
-  component: Education
-},{
-  path: '/resume/',
-  name: 'Resume',
-  component: Resume
-}];
-
-export const setCurrentRoute = (route: RouteRecordRaw | null): void => {
+export const setCurrentRoute = (route: Partial<RouteRecordRaw> | null): void => {
   currentRoute.value = route;
 }
 
 export const getCurrentRoute = computed(() => {
   return currentRoute.value;
 });
+
+export const routes: (Partial<RouteRecordRaw> & { title: string })[] = [{
+  path: '/nl/',
+  name: 'DutchHome',
+  title: 'Home',
+  component: DutchHome
+},{
+  path: '/nl/over-mij/',
+  name: 'DutchAbout',
+  title: 'Over mij',
+  component: DutchAbout
+},{
+  path: '/hu/',
+  name: 'HungarianHome',
+  title: 'Home',
+  component: HungarianHome
+},{
+  path: '/en/',
+  name: 'EnglishHome',
+  title: 'Home',
+  component: EnglishHome
+}];

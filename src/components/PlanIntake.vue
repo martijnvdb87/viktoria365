@@ -1,23 +1,21 @@
 <script setup lang="ts">
 import Icon from '@/components/Icon.vue';
-import resumeLink from '@/assets/martijn-van-den-bosch-resume-full-stack-developer.pdf';
 </script>
 
 <template>
-  <div class="download-resume">
-
-    <a :href="resumeLink" target="_blank" class="download-resume__link" download="Martijn van den Bosch - Resume full-stack developer">
-      <Icon type="file-text" class="download-resume__icon"></Icon>
-      Download resume
+  <div class="plan-intake">
+    <a href="mailto:viktoriavdb86@gmail.com" target="_blank" class="plan-intake__link">
+      <Icon type="file-text" class="plan-intake__icon"></Icon>
+      Contact
     </a>
   </div>
 </template>
 
 <style scoped lang="scss">
-.download-resume {
+.plan-intake {
   margin: 0.5rem 0;
 
-  .download-resume__link {
+  .plan-intake__link {
     display: inline-flex;
     text-decoration: none;
     gap: 0.5rem;
@@ -44,7 +42,7 @@ import resumeLink from '@/assets/martijn-van-den-bosch-resume-full-stack-develop
     }
   }
 
-  .download-resume__icon {
+  .plan-intake__icon {
     position: relative;
     width: 1.25rem;
     height: 1.25rem;
@@ -53,11 +51,11 @@ import resumeLink from '@/assets/martijn-van-den-bosch-resume-full-stack-develop
 }
 
 @media only screen and (min-width: 52rem) {
-  .download-resume {
+  .plan-intake {
     position: absolute;
     right: 0px;
 
-    .download-resume__link {
+    .plan-intake__link {
       padding: 0.75rem 1.25rem;
       font-size: 1rem;
       font-weight: 500;

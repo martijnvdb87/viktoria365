@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Profile from '@/components/Profile.vue';
 import Menu from '@/components/Menu.vue';
-import DownloadResume from '@/components/DownloadResume.vue';
 </script>
 
 <template>
@@ -19,7 +18,6 @@ import DownloadResume from '@/components/DownloadResume.vue';
         </transition>
       </router-view>
     </div>
-    <DownloadResume class="download-resume--resume" />
   </main>
 </template>
 
