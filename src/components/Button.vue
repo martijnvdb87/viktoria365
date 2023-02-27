@@ -92,15 +92,46 @@ button {
   &--variant-selector {
     display: flex;
     width: 100%;
+    margin: 0.25rem 0rem 0rem 0rem;
+    padding: 0;
 
     .button {
-      margin: 0;
-      padding: 0;
-
       &__text {
         display: flex;
         flex: 1;
         padding: 0.75rem 1rem;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        background-color: #ffffff;
+        color: var(--gray-800);
+    
+        &:hover {
+          background-color: var(--gray-50);
+        }
+
+        &:focus-visible {
+          z-index: 1;
+          outline: 0.1875rem solid var(--gray-150);
+        }
+
+        &:active {
+          transform: scale(0.975);
+        }
+      }
+    }
+  }
+
+  &--variant-current-language-selected {
+    display: inline-flex;
+    width: 100%;
+    margin: 0.25rem 0rem 0rem 0rem;
+    padding: 0;
+
+    .button {
+      &__text {
+        display: flex;
+        flex: 1;
+        padding: 0.5rem 0.75rem;
         font-weight: 500;
         border-radius: 0.5rem;
         background-color: #ffffff;

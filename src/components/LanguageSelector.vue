@@ -14,26 +14,28 @@ function switchLanguage(language: Language) {
   <div class="language-selector">
     <div class="language-selector__box">
       <section>
-        <h2>Lorem ipsum dolor sit amet</h2>
-        <p>consectetur adipiscing elit. Quisque ut ante at arcu tempus gravida dignissim non purus. Aenean turpis dolor, scelerisque eget magna a, rhoncus lacinia turpis. Vivamus mauris dolor, molestie nec augue vehicula, fermentum vehicula ante.</p>
+        <h2>Viktoria365.com</h2>
+        <p>The website is available in three languages. Choose one!</p>
+        <p>A weboldal három nyelven is elérhető. Válassz egyet!</p>
+        <p>De webpagina is beschikbaar in drie talen. Kies er één!</p>
       </section>
       <ol>
         <li>
-          <Button :action="() => switchLanguage(Languages.Dutch)" variant="selector">
-            <img class="flag" :src="flagNl">
-            <span>Ik spreek Nederlands</span>
+          <Button :action="() => switchLanguage(Languages.English)" variant="selector">
+            <img class="flag" :src="flagUk">
+            <span>English</span>
           </Button>
         </li>
         <li>
           <Button :action="() => switchLanguage(Languages.Hungarian)" variant="selector">
             <img class="flag" :src="flagHu">
-            <span>Beszélek magyarul</span>
+            <span>Magyar</span>
           </Button>
         </li>
         <li>
-          <Button :action="() => switchLanguage(Languages.English)" variant="selector">
-            <img class="flag" :src="flagUk">
-            <span>I speak English</span>
+          <Button :action="() => switchLanguage(Languages.Dutch)" variant="selector">
+            <img class="flag" :src="flagNl">
+            <span>Nederlands</span>
           </Button>
         </li>
       </ol>
@@ -52,7 +54,16 @@ function switchLanguage(language: Language) {
   height: 100vh;
 
   section {
-    padding: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
+    font-size: 0.9rem;
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
   }
 
   button {
@@ -61,7 +72,7 @@ function switchLanguage(language: Language) {
 
   &__box {
     padding: 1rem;
-    width: 32rem;
+    width: 24rem;
     max-width: 100%;
     background-color: #ffffff;
     border-radius: 0.5rem;

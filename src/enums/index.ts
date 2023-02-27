@@ -3,11 +3,15 @@ import { routes } from "@/routes";
 import { RouteRecordRaw } from "vue-router";
 import { store } from "@/store";
 import { router } from "@/main";
+import flagNl from '@/assets/flags/nl.svg';
+import flagHu from '@/assets/flags/hu.svg';
+import flagUk from '@/assets/flags/uk.svg';
 
 export class Language {
     readonly id: string;
     readonly name: string = '';
     readonly path: string = '';
+    readonly flag: string = '';
     readonly menu: Partial<RouteRecordRaw>[] = [];
 
   constructor(id: string, data: Partial<Language>) {
@@ -27,6 +31,7 @@ export class LanguageMenuItem {
 const dutch = new Language('dutch', {
   name: 'Nederlands',
   path: '/nl/',
+  flag: flagNl,
   menu: routes.filter(item => ([
     '/nl/',
     '/nl/over-mij/'
@@ -36,6 +41,7 @@ const dutch = new Language('dutch', {
 const hungarian = new Language('hungarian', {
   name: 'Magyar',
   path: '/hu/',
+  flag: flagHu,
   menu: routes.filter(item => ([
     '/hu/'
   ].includes(item.path!)))
@@ -44,6 +50,7 @@ const hungarian = new Language('hungarian', {
 const english = new Language('english', {
   name: 'English',
   path: '/en/',
+  flag: flagUk,
   menu: routes.filter(item => ([
     '/en/'
   ].includes(item.path!)))

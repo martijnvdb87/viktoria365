@@ -5,17 +5,13 @@ import PlanIntake from '@/components/PlanIntake.vue';
 import Button from '@/components/Button.vue';
 import { setLanguage } from '@/enums';
 import { router } from '@/main';
+import CurrentLanguageSelected from './CurrentLanguageSelected.vue';
 
 const props = withDefaults(defineProps<{
   status?: boolean
 }>(), {
   status: false
 });
-
-function switchLanguage() {
-  setLanguage(null);
-  router.push('/');
-}
 </script>
 
 <template>
@@ -28,7 +24,7 @@ function switchLanguage() {
     <header>
       <h1>Viktoria365</h1>
       <p></p>
-      <Button :action="switchLanguage">Language</Button>
+      <CurrentLanguageSelected />
       <PlanIntake />
     </header>
   </div>
