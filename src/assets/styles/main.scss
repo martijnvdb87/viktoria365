@@ -31,6 +31,32 @@ body {
   max-width: 50rem;
   margin: auto;
 }
+.language {
+  .container {
+    padding: 1.5rem;
+  }
+    
+  .columns__column {
+    p,
+    ul {
+      margin-bottom: 1rem;
+    }
+    ul {
+      margin-top: 0;
+    }
+  }
+  @media only screen and (min-width: 80rem) {
+    .columns__column {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 3rem;
+
+      > section {
+        flex: 0 0 calc(50% - 1.5rem);
+      }
+    }
+  }
+}
 
 @media only screen and (min-width: 52rem) {
   aside.columns__column {

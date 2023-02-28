@@ -10,9 +10,11 @@ export default defineConfig({
       input: {
         languageSelector: resolve(__dirname, 'index.html'),
         dutchHome: resolve(__dirname, 'nl/index.html'),
-        hungarianHome: resolve(__dirname, 'hu/index.html'),
-        englishHome: resolve(__dirname, 'en/index.html'),
         dutchAbout: resolve(__dirname, 'nl/over-mij/index.html'),
+        hungarianHome: resolve(__dirname, 'hu/index.html'),
+        hungarianAbout: resolve(__dirname, 'hu/rolam/index.html'),
+        englishHome: resolve(__dirname, 'en/index.html'),
+        englishAbout: resolve(__dirname, 'en/about-me/index.html'),
       }
     }
   },

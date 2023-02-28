@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Segment from '@/components/Segment.vue';
-import Link from '@/components/Link.vue';
+import Button from '@/components/Button.vue';
 </script>
 
 <template>
@@ -8,8 +8,29 @@ import Link from '@/components/Link.vue';
     <div class="container">
       <section class="columns">
         <div class="columns__column">
-          <Segment title="English">
-            <p>English</p>
+          <Segment title="Hello!" icon="smile">
+            <p>My name is Viktória. I'm a <strong>certified Hungarian language and literature teacher</strong> and a <strong>TESOL/TEFL</strong> (English as a second language) instructor. I live in the Netherlands.</p>
+          </Segment>
+
+          <Segment title="I can help you learn" icon="award">
+            <ul>
+              <li><strong>Hungarian</strong> (beginner, intermediate and advanced)</li>
+              <li><strong>English</strong> (beginner, intermediate)</li>
+              <li><strong>Dutch</strong> (beginner)</li>
+            </ul>
+          </Segment>
+
+          <Segment title="I offer" icon="message-square">
+            <ul>
+              <li>online 1:1 lessons (1 lesson = 50 min)</li>
+              <li>online group lessons (1 lesson = 90 min)</li>
+            </ul>
+            <p>You can bring your own book or I'll make learning material for you.</p>
+          </Segment>
+            
+          <Segment title="Are you interested?" icon="heart">
+            <p>Then let's get to know each other! You can book a <strong>15-minute free intake here</strong>:</p>
+            <p><Button href="" target="_blank">Book free intake</Button></p>
           </Segment>
         </div>
       </section>
@@ -18,27 +39,4 @@ import Link from '@/components/Link.vue';
 </template>
 
 <style scoped lang="scss">
-.language {
-  .container {
-    padding: 1.5rem;
-  }
-    
-  .columns__column {
-    p,
-    ul {
-      margin-bottom: 1rem;
-    }
-  }
-  @media only screen and (min-width: 80rem) {
-    .columns__column {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0 3rem;
-
-      > section {
-        flex: 0 0 calc(50% - 1.5rem);
-      }
-    }
-  }
-}
 </style>

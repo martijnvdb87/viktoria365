@@ -43,7 +43,8 @@ const hungarian = new Language('hungarian', {
   path: '/hu/',
   flag: flagHu,
   menu: routes.filter(item => ([
-    '/hu/'
+    '/hu/',
+    '/hu/rolam/'
   ].includes(item.path!)))
 });
 
@@ -52,7 +53,8 @@ const english = new Language('english', {
   path: '/en/',
   flag: flagUk,
   menu: routes.filter(item => ([
-    '/en/'
+    '/en/',
+    '/en/about-me/'
   ].includes(item.path!)))
 });
 

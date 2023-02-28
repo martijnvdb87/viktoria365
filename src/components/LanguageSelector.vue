@@ -24,18 +24,21 @@ function switchLanguage(language: Language) {
           <Button :action="() => switchLanguage(Languages.English)" variant="selector">
             <img class="flag" :src="flagUk">
             <span>English</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </Button>
         </li>
         <li>
           <Button :action="() => switchLanguage(Languages.Hungarian)" variant="selector">
             <img class="flag" :src="flagHu">
             <span>Magyar</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </Button>
         </li>
         <li>
           <Button :action="() => switchLanguage(Languages.Dutch)" variant="selector">
             <img class="flag" :src="flagNl">
             <span>Nederlands</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </Button>
         </li>
       </ol>
@@ -89,6 +92,12 @@ function switchLanguage(language: Language) {
     width: 2rem;
     margin-right: 0.5rem;
     border-radius: 99rem;
+  }
+
+  svg {
+    width: 1.25rem;
+    margin-left: auto;
+    opacity: 0.75;
   }
 }
 
