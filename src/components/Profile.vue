@@ -2,9 +2,6 @@
 import profilePicture from '@/assets/images/profile-picture.jpg';
 import Status from '@/components/Status.vue';
 import PlanIntake from '@/components/PlanIntake.vue';
-import Button from '@/components/Button.vue';
-import { setLanguage } from '@/enums';
-import { router } from '@/main';
 import CurrentLanguageSelected from './CurrentLanguageSelected.vue';
 
 const props = withDefaults(defineProps<{

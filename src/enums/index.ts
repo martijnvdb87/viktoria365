@@ -12,6 +12,7 @@ export class Language {
     readonly name: string = '';
     readonly path: string = '';
     readonly flag: string = '';
+    readonly planIntake: string = '';
     readonly menu: Partial<RouteRecordRaw>[] = [];
 
   constructor(id: string, data: Partial<Language>) {
@@ -32,6 +33,7 @@ const dutch = new Language('dutch', {
   name: 'Nederlands',
   path: '/nl/',
   flag: flagNl,
+  planIntake: 'Stuur een bericht',
   menu: routes.filter(item => ([
     '/nl/',
     '/nl/over-mij/'
@@ -42,6 +44,7 @@ const hungarian = new Language('hungarian', {
   name: 'Magyar',
   path: '/hu/',
   flag: flagHu,
+  planIntake: 'Kapcsolatfelvétel',
   menu: routes.filter(item => ([
     '/hu/',
     '/hu/rolam/'
@@ -52,6 +55,7 @@ const english = new Language('english', {
   name: 'English',
   path: '/en/',
   flag: flagUk,
+  planIntake: 'Contact me',
   menu: routes.filter(item => ([
     '/en/',
     '/en/about-me/'

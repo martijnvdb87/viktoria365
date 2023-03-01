@@ -22,7 +22,7 @@ import Segment from '@/components/Segment.vue';
         <aside class="columns__column">
           <Segment format="small" title="Certificates" icon="award">
             <ol>
-              <li><strong>TESOL/TEFL</strong> teaching <strong>English as a second or foreign language</strong> instructor</li>
+              <li>TESOL/TEFL teaching <strong>English as a second or foreign language</strong> instructor</li>
               <li><strong>BA</strong> (Bachelor of Arts) in <strong>Hungarian language &amp; literature</strong> (University of Nyíregyháza)</li>
               <li>The Bilingual Brain (University of Houston)</li>
               <li>Babel Language Courses (Dutch)</li>

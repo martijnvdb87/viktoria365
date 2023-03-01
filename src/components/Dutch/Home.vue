@@ -9,10 +9,10 @@ import Button from '@/components/Button.vue';
       <section class="columns">
         <div class="columns__column">
           <Segment title="Hoi!" icon="smile">
-            <p>Mijn naam is Viktória. Ik ben <strong>lerares Hongaars</strong> (Hongaarse taal en literatuur) &amp; <strong>TESOL/TEFL</strong> (Engels als tweede taal) instructeur. Ik woon in Nederland.</p>
+            <p>Mijn naam is Viktória. Ik ben <strong>lerares Hongaars</strong> (Hongaarse taal en literatuur) &amp; <strong>TESOL/TEFL instructeur</strong> (Engels als tweede taal). Ik woon in Nederland.</p>
           </Segment>
 
-          <Segment title="De volgende talen kan ik je helpen leren" icon="award">
+          <Segment title="De volgende talen kan ik je helpen leren:" icon="award">
             <ul>
               <li><strong>Hongaars</strong> (beginner, gevorderd en ver gevorderd)</li>
               <li><strong>Engels</strong> (beginner en gevorderd)</li>
@@ -20,7 +20,7 @@ import Button from '@/components/Button.vue';
             </ul>
           </Segment>
 
-          <Segment title="Zo kan je met mij leren" icon="message-square">
+          <Segment title="Zo kan je met mij leren:" icon="message-square">
             <ul>
               <li>online privéles (1 les = 50 min)</li>
               <li>online groepsles (1 les = 90 min)</li>
@@ -29,8 +29,8 @@ import Button from '@/components/Button.vue';
           </Segment>
             
           <Segment title="Ben je geïnteresseerd?" icon="heart">
-            <p>Dan laten we elkaar leren kennen! Hier kan je een <strong>gratis kennismakingsgesprek</strong> van 15 minuten boeken:</p>
-            <p><Button href="" target="_blank">Boek gratis kennismakingsgesprek</Button></p>
+            <p>Dan laten we elkaar leren kennen! Vul onderstaand formulier in.</p>
+            <p><Button href="https://forms.gle/ntzmUF7gwyLTbNxr8" target="_blank">Contactformulier</Button></p>
           </Segment>
         </div>
       </section>

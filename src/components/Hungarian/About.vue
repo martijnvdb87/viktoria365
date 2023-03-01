@@ -8,7 +8,7 @@ import Segment from '@/components/Segment.vue';
       <section class="columns">
         <div class="columns__column">
           <Segment title="Bemutatkozás" icon="user">
-            <p>Viktóriának hívnak. Magyar nyelv és irodalom szakon szereztem a diplomámat, de emellett angol mint idegen nyelv oktató (TESOL/TEFL) és online tartalomkészítő is vagyok. A magyar az anyanyelvem, de angolul és hollandul is folyékonyan beszélek. 2011 óta élek Hollandiában. Nagyon szeretek nyelveket tanulni és tanítani. Nemcsak tanár, de angol-magyar fordító is vagyok, illetve két e-könyvet is írtam magánkiadásban.</p>
+            <p>Viktóriának hívnak. Magyar nyelv és irodalom szakon szereztem a diplomámat, de emellett angol mint idegen nyelv oktató (TESOL/TEFL) és online tartalomkészítő is vagyok. A magyar az anyanyelvem, de angolul és hollandul is folyékonyan beszélek. 2011 óta élek Hollandiában. Nagyon szeretek nyelveket tanulni és tanítani. Nemcsak tanár, de angol-magyar fordító is vagyok, illetve két e-könyvet is írtam.</p>
           </Segment>
           <Segment title="Ezeket a nyelveket beszélem" icon="message-square">
             <ul>

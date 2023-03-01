@@ -9,10 +9,10 @@ import Button from '@/components/Button.vue';
       <section class="columns">
         <div class="columns__column">
           <Segment title="Hello!" icon="smile">
-            <p>My name is Viktória. I'm a <strong>certified Hungarian language and literature teacher</strong> and a <strong>TESOL/TEFL</strong> (English as a second language) instructor. I live in the Netherlands.</p>
+            <p>My name is Viktória. I'm a <strong>certified Hungarian language and literature teacher</strong> and a <strong>TESOL/TEFL instructor</strong> (English as a second language). I live in the Netherlands.</p>
           </Segment>
 
-          <Segment title="I can help you learn" icon="award">
+          <Segment title="I can help you learn:" icon="award">
             <ul>
               <li><strong>Hungarian</strong> (beginner, intermediate and advanced)</li>
               <li><strong>English</strong> (beginner, intermediate)</li>
@@ -20,7 +20,7 @@ import Button from '@/components/Button.vue';
             </ul>
           </Segment>
 
-          <Segment title="I offer" icon="message-square">
+          <Segment title="I offer:" icon="message-square">
             <ul>
               <li>online 1:1 lessons (1 lesson = 50 min)</li>
               <li>online group lessons (1 lesson = 90 min)</li>
@@ -29,8 +29,8 @@ import Button from '@/components/Button.vue';
           </Segment>
             
           <Segment title="Are you interested?" icon="heart">
-            <p>Then let's get to know each other! You can book a <strong>15-minute free intake here</strong>:</p>
-            <p><Button href="" target="_blank">Book free intake</Button></p>
+            <p>Then let's get to know each other! Please fill in the form below.</p>
+            <p><Button href="https://forms.gle/THRNgddLTF5HcTcYA" target="_blank">Application form</Button></p>
           </Segment>
         </div>
       </section>

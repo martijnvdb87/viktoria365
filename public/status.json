@@ -16,7 +16,7 @@
     "priority": 70
   },
   {
-    "name": "Working at Ksyos",
+    "name": "Teaching",
     "icon": "👨‍💻",
     "date": "workday",
     "time": ["08:00", "08:45"],
@@ -24,16 +24,16 @@
     "priority": 80
   },
   {
-    "name": "Exercising",
-    "icon": "🏋️",
+    "name": "Learning",
+    "icon": "📝",
     "date": "daily",
     "time": ["16:45", "17:15"],
     "duration": ["00:30", "01:00"],
     "priority": 100
   },
   {
-    "name": "Working on personal projects",
-    "icon": "💻",
+    "name": "Reading",
+    "icon": "📖",
     "date": "daily",
     "time": ["20:00", "21:30"],
     "duration": ["00:30", "02:00"],

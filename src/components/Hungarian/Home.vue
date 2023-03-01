@@ -12,7 +12,7 @@ import Button from '@/components/Button.vue';
             <p>Viktóriának hívnak. <strong>Diplomás magyartanár</strong> (magyar nyelv és irodalom) és <strong>angol mint idegen nyelv</strong> oktató vagyok. Hollandiában élek.</p>
           </Segment>
 
-          <Segment title="A következő nyelvek tanulásában tudok neked segíteni" icon="award">
+          <Segment title="A következő nyelvek tanulásában tudok neked segíteni:" icon="award">
             <ul>
               <li><strong>magyar</strong> (kezdő, középhaladó, haladó)</li>
               <li><strong>angol</strong> (kezdő, középhaladó)</li>
@@ -20,7 +20,7 @@ import Button from '@/components/Button.vue';
             </ul>
           </Segment>
 
-          <Segment title="Így tudsz velem tanulni" icon="message-square">
+          <Segment title="Így tudsz velem tanulni:" icon="message-square">
             <ul>
               <li>online magánóra (1 óra = 50 perc)</li>
               <li>online csoportos óra (1 óra = 90 perc)</li>
@@ -29,8 +29,8 @@ import Button from '@/components/Button.vue';
           </Segment>
             
           <Segment title="Érdekel?" icon="heart">
-            <p>Akkor ismerjük meg egymást! Itt foglalhatsz időpontot a 15 perces szintfelmérő (ingyenes) beszélgetéshez:</p>
-            <p><Button href="" target="_blank">Boek gratis kennismakingsgesprek</Button></p>
+            <p>Akkor ismerjük meg egymást! Töltsd ki a lenti kérdőívet.</p>
+            <p><Button href="https://forms.gle/FA8Sk2cgGEaCxCF1A" target="_blank">Jelentkezési lap</Button></p>
           </Segment>
         </div>
       </section>

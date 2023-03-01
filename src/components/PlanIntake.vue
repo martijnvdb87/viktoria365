@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import Icon from '@/components/Icon.vue';
+import { store } from '@/store';
 </script>
 
 <template>
   <div class="plan-intake">
-    <a href="mailto:viktoriavdb86@gmail.com" target="_blank" class="plan-intake__link">
-      <Icon type="file-text" class="plan-intake__icon"></Icon>
-      Contact
+    <a href="mailto:viktoria365@yahoo.com" target="_blank" class="plan-intake__link">
+      <Icon type="mail" class="plan-intake__icon"></Icon>
+      {{ store.language?.planIntake }}
     </a>
   </div>
 </template>
